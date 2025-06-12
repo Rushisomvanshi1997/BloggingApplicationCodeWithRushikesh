@@ -27,7 +27,7 @@ public class UserController {
 		@Autowired
 		private	UserService usrService;
 		
-		// create user
+		// create add  user 
 		
 		@PostMapping("/")
 		public ResponseEntity< UserDto>  createDto (@Valid @RequestBody UserDto userDto){
