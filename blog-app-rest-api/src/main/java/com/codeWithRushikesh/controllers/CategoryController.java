@@ -27,7 +27,7 @@ public class CategoryController {
 	public CategoryService categoryService;
 	
 	
-	//create
+	//create category
 	@PostMapping("/")
 	public  ResponseEntity<CategoryDto>  createCategory ( @Valid @RequestBody  CategoryDto categoryDto  ){
 		
