@@ -15,7 +15,6 @@ import com.codeWithRushikesh.services.PostService;
 @RequestMapping("/api/")
 public class PostController {
 	
-	// Rushsikesh somvanshi
 	@Autowired
 	private PostService postService;
 	
