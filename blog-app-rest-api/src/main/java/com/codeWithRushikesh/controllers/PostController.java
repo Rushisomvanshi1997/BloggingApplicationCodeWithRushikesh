@@ -20,7 +20,7 @@ public class PostController {
 	private PostService postService;
 	
 	
-	// create post
+	// create post Rushikesh
 	@PostMapping("/user/{userId}/category/{categoryId}/posts")
 	public ResponseEntity< PostDto> createPost ( @RequestBody  PostDto postDto,
 			@PathVariable  Integer userId,
