@@ -1,7 +1,7 @@
 package com.codeWithRushikesh.repositories;
 
 import java.util.List;
-import java.util.Locale.Category;
+import com.codeWithRushikesh.entities.Category;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -15,5 +15,6 @@ public interface PostRepo extends JpaRepository<Post, Integer> {
 	
 	List<Post> findByUser(User user);
 	List<Post> findByCategory(Category category);
+
 
 }

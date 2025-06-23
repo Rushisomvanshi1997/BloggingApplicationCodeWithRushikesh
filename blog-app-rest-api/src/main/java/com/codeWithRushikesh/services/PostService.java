@@ -3,6 +3,7 @@ package com.codeWithRushikesh.services;
 import java.util.List;
 
 import com.codeWithRushikesh.payloads.PostDto;
+import com.codeWithRushikesh.payloads.PostResponse;
 
 public interface PostService {
 	
@@ -18,7 +19,7 @@ public interface PostService {
 	void deletePost(Integer postId);
 	
 	// get all post
-	List<PostDto> getAllPost();
+	PostResponse getAllPost( Integer pageNumber , Integer pageSize,String sortBy ,String sortDir);
 	
 	//get single post
 	PostDto getPostById(Integer postId);
@@ -27,7 +28,7 @@ public interface PostService {
 	List<PostDto> getPostByCategory(Integer categoryId);
 	
 	// get all post by User
-	List<PostDto> getPostByUser(Integer categoryId);
+	List<PostDto> getPostByUser(Integer userId);
 	
 	
 	
