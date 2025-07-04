@@ -17,9 +17,13 @@ import com.codeWithRushikesh.payloads.ApiResponce;
 import com.codeWithRushikesh.payloads.PostDto;
 import com.codeWithRushikesh.payloads.PostResponse;
 import com.codeWithRushikesh.services.PostService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 
 @RestController
 @RequestMapping("/api/")
+@Tag(name = "Post", description = "Post management APIs")
 public class PostController {
 	
 	@Autowired
@@ -28,6 +32,7 @@ public class PostController {
 	
 	// create post Rushikesh
 	@PostMapping("/user/{userId}/category/{categoryId}/posts")
+	 @Operation(summary = "Create  Post", description = "Returns a single Post")
 	public ResponseEntity< PostDto> createPost ( @RequestBody  PostDto postDto,
 			@PathVariable  Integer userId,
 			@PathVariable   Integer categoryId ){

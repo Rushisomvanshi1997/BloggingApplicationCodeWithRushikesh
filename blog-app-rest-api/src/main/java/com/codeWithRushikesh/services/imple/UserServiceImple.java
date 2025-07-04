@@ -1,14 +1,13 @@
 package com.codeWithRushikesh.services.imple;
 import java.util.List;
 import java.util.stream.Collectors;
-
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.codeWithRushikesh.entities.User;
 import com.codeWithRushikesh.expections.ResourceNotFoundException;
 import com.codeWithRushikesh.payloads.UserDto;
+import com.codeWithRushikesh.repositories.RoleRepo;
 import com.codeWithRushikesh.repositories.UserRepo;
 import com.codeWithRushikesh.services.UserService;
 
@@ -18,6 +17,9 @@ public class UserServiceImple  implements UserService{
 	
 	@Autowired
 	private  UserRepo userRepo;
+	
+	@Autowired
+	private RoleRepo roleRepo;
 	
 	@Autowired
 	private ModelMapper modelMapper;
@@ -126,5 +128,7 @@ public class UserServiceImple  implements UserService{
     	return userDto;
 		
 	}
+    
+   
 
 }
